@@ -2,8 +2,8 @@ terraform {
   backend "local" {
     path = "/opt/buckets/jamapla/terraform.ftstate"
   }
-}%                                                                                                                                                                                            
-asanc35@cpees_mad002937 reto-kairos % cat main.tf 
+}                                                                                                                                                                                           
+
 provider "aws" {
   region  = "eu-west-1"
 }
