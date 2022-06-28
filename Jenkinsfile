@@ -39,5 +39,20 @@ pipeline {
                 sh "terraform apply --auto-approve"
             }
         }
+        stage ("Ansible test") {
+            steps {
+                sh "ansible-playbook ansible-reto.yml --check"
+            }
+        }
+        stage ("Ansible apply") {
+            when {
+                anyOf {
+                    branch 'main'
+                }
+            }
+            steps {
+                sh "ansible-playbook ansible-reto.yml"
+            }
+        }
     }
 }
