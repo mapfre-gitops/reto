@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+  - name: Creacion de bucket S3 Ansible
+    amazon.aws.aws_s3:
+      bucket: mapfre-gitops-asanc35
+      object: index.html
+      src: index.html
+      permission: public-read
+      mode: put
