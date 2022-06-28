@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("Init") {
             steps {
-                sh "Primer mensaje"
+                sh  "echo \"Primer mensaje\""
             }
         }
     }
