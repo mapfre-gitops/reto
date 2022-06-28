@@ -1,9 +1,3 @@
-terraform {
-  backend "local" {
-    path = "/opt/buckets/jamapla/terraform.ftstate"
-  }
-}                                                                                                                                                                                           
-
 provider "aws" {
   region  = "eu-west-1"
 }
